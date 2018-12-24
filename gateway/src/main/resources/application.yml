@@ -1,0 +1,29 @@
+server:
+  port: 8801
+
+zuul:
+  add-host-header: true
+  routes:
+    server-test1:
+      path: api-test/**
+      sensitiveHeaders:
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    metadata-map:
+      user.name: "user"         #These two are needed so that the server
+      user.password: "password" #can access the protected client endpoints
+  client:
+    service-url:
+      defaultZone: http://user:password@localhost:8761/eureka/

@@ -9,4 +9,4 @@
 ## spring boot admin
 ![image](https://github.com/lllsmiling/spring-cloud-starter/blob/master/static/spring-boot-admin-login.png)
 ![image](https://github.com/lllsmiling/spring-cloud-starter/blob/master/static/spring-boot-admin-index.png)
-![image](https://github.com/lllsmiling/spring-cloud-starter/blob/master/static/spring-boot-admin-dashboard.png)
+![image](https://github.com/lllsmiling/spring-cloud-starter/blob/master/static/spring-boot-dashboard.png)
