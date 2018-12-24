@@ -1,0 +1,54 @@
+server:
+  port: 8999
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+spring:
+  application:
+    name: dsp-rtb
+  # redis配置信息
+  redis:
+    database: 0
+    host: 192.168.100.11
+    port: 6379
+  datasource:
+    druid:
+      # 初始连接数
+      initial-size: 5
+      # 最大激活数
+      max-active: 50
+      # 最大等待时间
+      max-wait: 3000
+      # 是否启用非公平锁
+      use-unfair-lock: true
+      # mysql 用 false | oracle 用 true
+      pool-prepared-statements: false
+    primary:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: test1
+      url: jdbc:mysql://192.168.100.11:3306/test1?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&allowMultiQueries=true
+      type: com.alibaba.druid.pool.DruidDataSource
+    secondary:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: test1
+      url: jdbc:mysql://192.168.100.11:3306/test2?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&allowMultiQueries=true
+      type: com.alibaba.druid.pool.DruidDataSource
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    metadata-map:
+      user.name: "user"         #These two are needed so that the server
+      user.password: "password" #can access the protected client endpoints
+  client:
+    service-url:
+      defaultZone: http://user:password@192.168.100.11:8761/eureka/

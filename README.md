@@ -1,6 +1,12 @@
 # spring-cloud-starter
 基于spring cloud Finchley.SR2和spring boot 2.1.1.RELEASE  
-包括spring cloud zuul、spring boot admin、spring boot eureka、apollo
+- spring cloud zuul
+- spring boot admin
+- spring boot eureka
+- apollo
+- spring cloud feign(且支持proto调用)
+- druid + mysql + mybatis多数据源
+- druid数据库监控
 
 # 界面预览
 ## spring eureka
