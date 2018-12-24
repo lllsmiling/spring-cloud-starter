@@ -6,4 +6,7 @@
 ## spring eureka
 ![image](https://github.com/lllsmiling/spring-cloud-starter/blob/master/static/eureka.png)
 
-
+## spring boot admin
+![image](https://github.com/lllsmiling/spring-cloud-starter/blob/master/static/spring-boot-login.png)
+![image](https://github.com/lllsmiling/spring-cloud-starter/blob/master/static/spring-boot-admin-index.png)
+![image](https://github.com/lllsmiling/spring-cloud-starter/blob/master/static/spring-boot-dashboard)
