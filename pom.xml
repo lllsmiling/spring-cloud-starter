@@ -20,6 +20,7 @@
         <module>gateway</module>
         <module>server-demo</module>
         <module>user-service</module>
+        <module>lingqi-common</module>
     </modules>
     <dependencyManagement>
         <dependencies>
